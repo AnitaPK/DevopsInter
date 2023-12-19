@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.origin {
+        position: relative;
+        top:0;
+        left:0;
+        z-index: -1;
+        }
+    div.traslate {
+        transform: translate(50px, 100px);
+      }
+      div.rotate {
+        transform: rotate(20deg);
+    }
+    div.scale {
+        transform: scale(0.7);
+
+    }
+    div.skew{
+        transform: skew(40deg, 20deg);
+    }
+    div.matrix {
+        transform: matrix(1, -0.3, 0, 2, 0, 0);
+    }
+    div.transition {
+        transition: width 2s, transform 1s;
+        transition-delay: 3s;
+        width:100px;
+        height:200px;
+    }
+
+    .transition:hover {
+        width: 400px;
+    }
+    div.animation {
+        width: 100px;
+        height: 100px;
+  /* background-color: red; */
+        animation-name: example;
+        animation-duration: 10s;
+        animation-duration: 4s;
+        animation-direction: reverse;
+    }
+
+    @keyframes example {
+        from {background-color: red;}
+        to {background-color: yellow;}
+    }
+
+    div.relative {
+        position: relative;
+        top:10px;
+        left:10px;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(2, 147, 147);
+    }
+    div.absolute{
+        position: absolute;
+        top:10px;
+        left:10px;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(163, 217, 217);
+        transform: translate();
+    }
+    </style>
+</head>
+<body>
+
+    <div class="relative"></div>
+    <div class="absolute"></div>
+
+    <!-- <div class="matrix" style="background-color: rgb(14, 6, 13); width:100px;height:100px"></div>
+
+    <div class="origin" style="background-color: rgb(166, 166, 201); width:200px;height:200px"></div>
+    <div class="traslate" style="background-color: rgb(6, 6, 122); width:200px;height:200px"></div>
+    <div class="rotate" style="background-color: rgb(176, 151, 40); width:200px;height:200px"></div>
+    <div class="scale" style="background-color: rgb(220, 28, 57); width:100px;height:100px"></div>
+    <div class="skew" style="background-color: rgb(178, 31, 161); width:100px;height:100px"></div> -->
+
+    <div class="transition" style="background-color: rgb(176, 151, 40); "></div>
+    <div class="animation" style="background-color: rgb(49, 40, 176) "></div>
+
+
+
+
+
+
+    
+
+
+</body>
+</html>
